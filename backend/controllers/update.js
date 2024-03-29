@@ -6,8 +6,8 @@ const router = express.Router()
 
 router.patch('/:id', async (req, res) => {
   try {
-    const { id : _id } = req.params.id
-    const toUpdate = req.body.updatedTask
+    const { id : _id } = req.params
+    const toUpdate = req.body
 
     // check for priority
     if(!isValidPriority(toUpdate.priority)) {
@@ -16,7 +16,11 @@ router.patch('/:id', async (req, res) => {
         error: 'Bad Request :crying_cat_face:' 
       })
     }
-    const updatedTask = await Tasks.findByIdAndUpdate(_id, toUpdate)
+    const updatedTask = await Tasks.findByIdAndUpdate(
+      _id, 
+      toUpdate, 
+      { new: true }
+    )
     res.status(200).json({ statusCode: 200, data: updatedTask })
   } catch (error) {
     res.status(500).json({ statusCode: 500, error: 'Internal Server Error !' })

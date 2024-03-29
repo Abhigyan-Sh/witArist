@@ -5,7 +5,7 @@ const router = express.Router()
 
 router.post('/', async (req, res) => {
   try {
-    const { body } = req.body
+    const { body } = req
 
     const task = new Tasks({
       title: body.title,

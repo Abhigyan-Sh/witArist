@@ -5,7 +5,7 @@ import { isValidPriority } from '../utils/isValidPriority.js'
 
 const router = express.Router()
 
-router.get('/filter', async (req, res) => {
+router.get('/', async (req, res) => {
   try {
     const { 
       updatedAt : _updatedAt, 
@@ -14,6 +14,7 @@ router.get('/filter', async (req, res) => {
     } = req.query
 
     let filters = {}
+    
     if (_updatedAt) {
       filters.updatedAt = { $eq: new Date(_updatedAt) }
     }
