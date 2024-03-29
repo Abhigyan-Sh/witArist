@@ -1,6 +1,6 @@
 import { MdDeleteForever } from 'react-icons/md'
 import { BiPencil } from 'react-icons/bi'
-import Priority from './Priority'
+import Priority from '../ui/PriorityBadge'
 
 const Tasks = () => {
   return (

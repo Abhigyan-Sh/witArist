@@ -1,3 +1,4 @@
+import DropdownFilter from '../elements/DropdownFilter'
 
 const StatusBar = () => {
   return (
@@ -5,7 +6,8 @@ const StatusBar = () => {
       <div className='w-full flex justify-between items-center py-4 px-8'>
         <div>
           <p className='text-2xl'>ToDo List</p>
-          <p className='text-lg font-light tracking-widest'>keep it up</p>
+          <p className='text-lg font-light tracking-widest mb-4'>keep it up</p>
+          <DropdownFilter filter='filter' />
         </div>
         <div className='h-28 w-28 rounded-full bg-[#FF5631] flex items-center justify-center'>
           <p className='text-gray-800 text-3xl font-extrabold'>1/3</p>

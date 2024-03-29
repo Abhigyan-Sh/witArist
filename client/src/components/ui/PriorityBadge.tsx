@@ -1,6 +1,6 @@
 
 
-const Priority = () => {
+const PriorityBadge = () => {
   const prior = 'high'
   const priorityIndicator = {
     low: 'text-emerald-800 bg-emerald-300', 
@@ -14,4 +14,4 @@ const Priority = () => {
   )
 }
 
-export default Priority
+export default PriorityBadge

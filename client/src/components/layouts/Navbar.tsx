@@ -1,6 +1,6 @@
 import { IconContext } from 'react-icons'
 import { IoExit } from 'react-icons/io5'
-import Avatar from './Avatar'
+import Avatar from '../ui/Avatar'
 
 const Navbar = () => {
   return (
