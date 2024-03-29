@@ -1,7 +1,13 @@
 import express from 'express'
 import cors from 'cors'
 import connectToMongoDB from './mongoDB/connectToMongoDB.js'
-import { create, deletion, read, update, filter } from './controllers/index.js'
+import { 
+  create, 
+  deletion, 
+  read, 
+  update, 
+  filter
+} from './controllers/index.js'
 
 // Setup
 const app = express()

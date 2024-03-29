@@ -15,6 +15,7 @@ router.get('/', async (req, res) => {
 
     let filters = {}
     
+    /* populate filters object based on user selection */ 
     if (_updatedAt) {
       filters.updatedAt = { $eq: new Date(_updatedAt) }
     }
@@ -32,6 +33,7 @@ router.get('/', async (req, res) => {
       filters.category = _category
     }
 
+    // whether filters present ?
     if(isEmptyObject(filters)) {
       return res.status(400).json({ 
         statusCode: 400, 

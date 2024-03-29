@@ -9,13 +9,15 @@ router.patch('/:id', async (req, res) => {
     const { id : _id } = req.params
     const toUpdate = req.body
 
-    // check for priority
+    // whether sent 'priority' is valid ??
     if(!isValidPriority(toUpdate.priority)) {
       return res.status(400).json({ 
         statusCode: 400, 
         error: 'Bad Request :crying_cat_face:' 
       })
     }
+
+    // update the task and save to DB
     const updatedTask = await Tasks.findByIdAndUpdate(
       _id, 
       toUpdate, 
