@@ -8,3 +8,8 @@ export const categories = [
   'travel', 
   'others'
 ]
+
+export const isValidCategory = (category) => 
+{
+  return categories.includes(category)
+}

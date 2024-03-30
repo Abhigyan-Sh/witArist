@@ -6,13 +6,10 @@
     "module": "ESNext",
     "skipLibCheck": true,
 
-    /* Absolute Paths */
-    "baseUrl": "./src",
+    "baseUrl": "./",
     "paths": {
-      "@components/*": [
-        "./components/*"
-      ], 
-    }, 
+      "@/components*": ["components/*"]
+    },
 
     /* Bundler mode */
     "moduleResolution": "bundler",
@@ -21,7 +18,6 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "noImplicitAny": true,
 
     /* Linting */
     "strict": true,

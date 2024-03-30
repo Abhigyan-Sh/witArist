@@ -2,10 +2,6 @@ const Avatar = ({
   src, 
   width, 
   height
-}: {
-  src?: string,
-  width?: string,
-  height?: string
 }) => {
   return (
     <div>

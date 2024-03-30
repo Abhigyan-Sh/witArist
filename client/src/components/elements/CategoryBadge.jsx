@@ -1,17 +1,12 @@
-import { MouseEventHandler } from 'react'
 import { IoClose } from 'react-icons/io5'
 
 const CategoryBadge = (
   {
     key_prop, 
     index, 
+    choosenCategory, 
     text, 
     onClick
-  } : { 
-    key_prop : string, 
-    index : number, 
-    text : string, 
-    onClick : MouseEventHandler<HTMLButtonElement>
   }
 ) => {
   const badgeColors = [
@@ -27,11 +22,12 @@ const CategoryBadge = (
   return (
     <button 
       key={key_prop} 
-      onClick={onClick} 
-      className={`text-xs font-medium me-2 px-2.5 py-0.5 rounded ${badgeColors[index % badgeColors.length]} my-1 basis-[10% - 10px] flex flex-row justify-between items-center gap-1 cursor-pointer`}
+      onClick={() => onClick(text)} 
+      className={`text-xs font-medium me-2 px-2.5 py-0.5 rounded 
+        ${badgeColors[index % badgeColors.length]} my-1 basis-[10% - 10px] flex flex-row justify-between items-center gap-1 cursor-pointer`}
     >
-      {text}
-      <IoClose className='mt-[2px]' />
+      {text} 
+      {(choosenCategory === text) && <IoClose className='mt-[2px]' />}
     </button>
   )
 }
