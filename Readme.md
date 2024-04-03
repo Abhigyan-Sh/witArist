@@ -32,6 +32,7 @@ npm run dev
 
 ## Application UI
 ![View the image](./client/public/ApplicationUI.png)
+![View the image](./client/public/MobileResponsive.png)
 
 ## Features
 1. Seamlessly manage your daily tasks with options to **create**, **update**, and **delete** them.
