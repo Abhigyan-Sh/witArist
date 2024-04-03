@@ -31,8 +31,11 @@ npm run dev
 **Also Visit the deployed URL:** [visit the site..](https://wit-arist.vercel.app/)
 
 ## Application UI
-![View the image](./client/public/ApplicationUI.png)
-![View the image](./client/public/MobileResponsive.png)
+![Application UI](./client/public/ApplicationUI.png)
+<img 
+  src="./client/public/MobileResponsive.png" 
+  alt="mobile responsive UI" 
+  width="400px" />
 
 ## Features
 1. Seamlessly manage your daily tasks with options to **create**, **update**, and **delete** them.
